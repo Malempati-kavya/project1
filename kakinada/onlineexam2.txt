@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>ONLINE EXAM</title>
+<style>
+*{
+background-color:pink;
+}
+</style>
+</head>
+<body>
+<a href="onlineexam1.html"><button>HOME</button></a><br>
+<center>
+<div id="login">
+<table>
+<tr>
+<td>USERNAME</td>
+<td><input type="text" name="USERNAME" value=" "></td>
+ </tr>
+<td>PASSWORD</td>
+<td><input type="password" name="PASSWORD" value=" "></td>
+ </tr>
+<button type="submit">SUBMIT</button>
+</button>
+</div>
+</body>
+</html>

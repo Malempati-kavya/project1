@@ -1,0 +1,42 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "college";
+
+$conn = mysql_connect($servername, $username, $password);
+if (!$conn) {
+    die("Connection failed: " . mysql_error($conn));
+}
+$user=$_POST['NAME'];
+$pwd=$_POST['PASSWORD'];
+$gen=$_POST['GENDER'];
+$qual=$_POST['QUALIF'];
+$mail=$_POST['EMAIL'];
+$mob=$_POST['MOBILE'];
+$age=$_POST['AGE'];
+$addr=$_POST['ADDR'];
+$city=$_POST['CITY'];
+$pin=$_POST['PIN'];
+$texp=$_POST['TECH_EXP'];
+$cfrom=$_POST['CLASS_FROM'];
+$cto=$_POST['CLASS_TO'];
+$ctime=$_POST['CONV_TIME_Hr'].$_POST['CONV_TIME_day'];
+$tsub=$_POST['TECH_SUB'];
+//print_r($_POST);
+
+mysql_select_db($dbname);
+$inssql = "'".$user ."','".$pwd ."','".$gen."','".$qual."','".$mail."','".$mob."',".$age.",'".$addr."','".$city."','".$pin."','";
+$inssql =$inssql.$texp."','".$cfrom."','".$cto."','".$ctime."','".$tsub."'";
+$inssql= "insert into regusers values(".$inssql.")";
+$result = mysql_query( $inssql);
+
+if ($result==true) 
+{
+      $message = "Registered Successfully";
+      echo "<script type='text/javascript'>alert('$message');</script>";
+      header('Location:/kakinada/TUTOR.html');
+}
+ else 
+    echo "Registration is Not Completed..........!".mysql_error($conn);
+?>

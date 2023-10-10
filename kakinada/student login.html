@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+*{
+margin:0;
+padding:0;
+font-family:Century Gothic;
+}
+header{
+height:20vh;
+background-size:cover;
+background-position:center;
+background-color:#808080;
+}
+ul{
+float:right;
+list-style-type:none;
+margin-top: 25px;
+}
+ul li{
+display:inline-block;
+}
+ul li a{
+text-decoration:none;
+color:#F0FFF0;
+padding:5px 20px;
+border:1px solid #000000;
+transition:0.6s ease;
+}
+ul li a:hover{
+background-color:#F08080;
+color:#000;
+}
+.container{
+max-width:960px;
+margin:0 auto;
+background:.#f9f9f9;
+font-size:24px;
+padding:25px;
+}
+.tu{
+background:url(../img1.png);
+background-size:cover;
+background-attachment:fixed;
+height:500px;
+}
+.principal{
+left:35%;
+top:30%;
+transform:tanslate(-50%,-50%);
+position:absolute;
+letter-spacing:5px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<header>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="ABOUT.html">ABOUT</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</header>
+<form action="studentlogin.php" method="POST">
+<h3>SUBJECT NAME</h3>
+<input type="text" name="SELECT SUBJECT" value="">
+<input type="submit" name="SUBMIT">
+</form>
+</body>
+</html>
